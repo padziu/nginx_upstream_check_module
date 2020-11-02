@@ -1472,7 +1472,7 @@ ngx_http_upstream_check_recv_handler(ngx_event_t *event)
         return;
 
     case NGX_ERROR:
-        ngx_log_error(NGX_LOG_ERR, event->log, 0,
+        ngx_log_error(NGX_LOG_NOTICE, event->log, 0,
                       "check protocol %V error with peer: %V ",
                       &peer->conf->check_type_conf->name,
                       &peer->check_peer_addr->name);
